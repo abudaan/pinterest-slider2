@@ -1,3 +1,20 @@
+---
+layout: post
+title: React components and state management
+date: "14-06-2016"
+tags: React Redux Flux Relay GraphQL state management
+thumb:
+leadimg:
+author: Daniel
+contact: Daniel
+about:
+description:
+github: https://github.com/abudaan/pinterest-slider2
+nerd: 3
+---
+
+
+
 ###Introduction
 
 React has increasingly become a popular choice for building complex interactive front-ends. One of the great benefits of React is that we can create reusable components. A component is reusable if it is not hard-wired to the application or to the application state.
@@ -8,7 +25,8 @@ Parent components can be other dumb components or smart components. A smart comp
 
 Apart from dumb opposed to smart you may find other naming pairs such as presentational and container, skinny and fat, stateful and pure, screens and components and so on. I will use component (dumb) and container (smart).
 
-This article discusses a simple application that logs in to your Pinterest account and fetches all your public boards. After selecting a board a slideshow containing all images in that board will start. Before you start the slideshow you can set the interval between two successive images.
+This article discusses a simple application that lets you log in to your Pinterest account and fetches all your public boards. After selecting a board a slideshow containing all images in that board will start. Before you start the slideshow you can set the interval between two consecutive images.
+
 
 I have created 3 versions of this application all using a different technology for managing the application state:
 
@@ -22,7 +40,7 @@ Obviously Relay and GraphQL are not designed for managing application state; the
 
 ###The structure of the app
 
-The code of the application is at [github](https://github.com/abudaan/pinterest-slider2) and a live version can be found [here](https://abumarkub.net/pinterest-slider/).
+The code of the application is at [github](https://github.com/tweedegolf/pinterest-slider) and a live version can be found [here](https://abumarkub.net/pinterest-slider/).
 
 The application has only one container, this is in line with the recommendations for maintainable and reusable code: to have as little components with state (i.e. containers) as possible. The container is called App and you can find its code in /containers/app.js
 
@@ -92,5 +110,4 @@ But in applications that require a lot of data fetching it is not a question of 
 [async requests](http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited/)
 
 [getting data from an API](https://medium.com/@tribou/flux-getting-data-from-an-api-b73b6478c015#.164yw4ysk)
-
 

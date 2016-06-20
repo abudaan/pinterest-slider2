@@ -1,0 +1,29 @@
+schema {
+  query: Query
+}
+
+type Board {
+  id: String
+  url: String
+  name: String
+}
+
+type Image {
+  id: String
+  url: String
+  pinUrl: String
+}
+
+type Images {
+  images: [Image]
+}
+
+type Query {
+  session: Session
+  images(boardId: String): Images
+}
+
+type Session {
+  authorized: Boolean
+  boards: [Board]
+}
